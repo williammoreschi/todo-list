@@ -1,0 +1,84 @@
+.task {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  align-items: flex-start;
+}
+
+.task label {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  cursor: pointer;
+  flex: 1;
+}
+
+.task input:focus {
+  box-shadow: none;
+}
+
+.task p {
+  flex: 1;
+}
+
+.task input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-clip: content-box;
+  border-radius: 9px;
+  border: solid 2px var(--blue);
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  transition: all 0.2s;
+}
+
+
+.task input[type=checkbox]:checked {
+  border: none;
+  border-color: var(--purple-dark);
+  background-color: var(--purple-dark);
+  position: relative;
+}
+
+.task input[type=checkbox]:checked::after{
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: 0.45rem;
+  height: 7px;
+  width: 3.5px;
+  border: solid #F2F2F2;
+  border-width: 0 1.5px 1.5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+.task input[type=checkbox]:checked ~ p {
+  text-decoration: line-through;
+}
+
+.task button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  color: var(--gray-300);
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: all 0.2s;
+}
+.task button:hover {
+  color: var(--danger);
+  background-color: var(--gray-400);
+}

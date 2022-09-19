@@ -1,0 +1,81 @@
+.newTask {
+  max-width: 46rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: -1.5rem auto 0;
+  padding: 0 1rem;
+}
+
+.newTask>input {
+  flex: 1;
+  border: 1px solid var(--gray-700);
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.newTask>button {
+  border: none;
+  background-color: var(--blue-dark);
+  color: var(--gray-100);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+  cursor: pointer;
+  gap: 0.5rem
+}
+
+.task>button:hover {
+  background-color: var(--blue);
+}
+
+.tasks {
+  max-width: 46rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.tasks>.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tasks>.info>div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tasks>.info>div>span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-500);
+  color: var(--gray-100);
+  padding: 0.1rem 0.5rem;
+  border-radius: 8px;
+}
+
+.tasks>.info>div.created p {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.info>div.done p {
+  color: var(--purple);
+  font-weight: bold;
+}
+
+.list {
+  display: flex;
+  margin: 1.5rem 0;
+  flex-direction: column;
+  gap: 1rem;
+}
